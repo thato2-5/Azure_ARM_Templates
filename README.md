@@ -4,11 +4,11 @@ Welcome to my ARM Templates repository! This repository contains a collection of
 
 Features
 
-  -> Comprehensive Templates: A wide range of templates for different Azure services and scenarios.
-  -> Modular Design: Templates are designed to be modular, allowing for easy customization and reusability.
-  -> Best Practices: Follow Azure's best practices for security, scalability, and performance.
-  -> Documentation: Each template comes with detailed documentation to help you understand and use it effectively.
-  -> Community Contributions: Open to contributions and suggestions from the community.
+   Comprehensive Templates: A wide range of templates for different Azure services and scenarios.
+   Modular Design: Templates are designed to be modular, allowing for easy customization and reusability.
+   Best Practices: Follow Azure's best practices for security, scalability, and performance.
+   Documentation: Each template comes with detailed documentation to help you understand and use it effectively.
+   Community Contributions: Open to contributions and suggestions from the community.
 
 Getting Started
 
