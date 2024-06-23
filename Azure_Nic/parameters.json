@@ -1,0 +1,71 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "comments": {
+        "resourceType": "Azure NIC",
+        "Author": "Thato Monyamane",
+        "Description": "This ARM template will create a basic network interface card (NIC) in Azure. This interface can then be attached to a VNet (Virtual Network) for internet connection",
+        "Performance": "Private IP",
+        "Date": "23/06/24"
+    },
+    "parameters": {
+        "networkInterfaceName": {
+            "value": "Nic01"
+        },
+        "location": {
+            "value": "southafricanorth"
+        },
+        "subnetId": {
+            "value": "/subscriptions/78fc6496-b9cb-4918-a231-b199ddf00c4c/resourceGroups/TestRG02/providers/Microsoft.Network/virtualNetworks/vnet-1/subnets/snet-1"
+        },
+        "privateIPAllocationMethod": {
+            "value": "Dynamic"
+        },
+        "vnetLocation": {
+            "value": "southafricanorth"
+        },
+        "vnetExtendedLocation": {
+            "value": {}
+        },
+        "vnetVirtualNetworkName": {
+            "value": "vnet-1"
+        },
+        "vnetResourceGroupName": {
+            "value": "TestRG02"
+        },
+        "vnetDeploymentName": {
+            "value": "network-interface-associated-virtual-network-20240623053644"
+        },
+        "vnetNatGatewaysWithNewPublicIpAddress": {
+            "value": []
+        },
+        "vnetNatGatewaysWithoutNewPublicIpAddress": {
+            "value": []
+        },
+        "vnetNatGatewayPublicIpAddressesNewNames": {
+            "value": []
+        },
+        "vnetNetworkSecurityGroupsNew": {
+            "value": []
+        },
+        "vnetProperties": {
+            "value": {
+                "subnets": [
+                    {
+                        "name": "snet-1",
+                        "properties": {
+                            "addressPrefixes": [
+                                "172.16.0.0/24"
+                            ]
+                        }
+                    }
+                ],
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "172.16.0.0/16"
+                    ]
+                }
+            }
+        }
+    }
+}

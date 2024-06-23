@@ -1,0 +1,46 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "comments": {
+        "resourceType": "Azure Disk",
+        "Author": "Thato Monyamane",
+        "Description": "This ARM template will create a basic disk in Azure. This can be used to create snapshots of VM (Virtual Machine)",
+        "Performance": "Standard HDD",
+        "Date": "23/06/24"
+    },
+    "parameters": {
+        "diskName": {
+            "value": "vm1Disk1"
+        },
+        "location": {
+            "value": "southafricanorth"
+        },
+        "sku": {
+            "value": "Standard_LRS"
+        },
+        "diskSizeGb": {
+            "value": 32
+        },
+        "sourceResourceId": {
+            "value": ""
+        },
+        "hyperVGeneration": {
+            "value": ""
+        },
+        "diskEncryptionSetType": {
+            "value": "EncryptionAtRestWithPlatformKey"
+        },
+        "createOption": {
+            "value": "empty"
+        },
+        "dataAccessAuthMode": {
+            "value": "None"
+        },
+        "networkAccessPolicy": {
+            "value": "AllowAll"
+        },
+        "publicNetworkAccess": {
+            "value": "Enabled"
+        }
+    }
+}
