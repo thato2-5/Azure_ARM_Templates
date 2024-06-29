@@ -1,0 +1,55 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "comments": {
+        "resourceType": "Azure Python 3.12 Web App using Azure App Service plan",
+        "Author": "Thato Monyamane",
+        "Description": "This ARM template will create a basic python web app using the B1 app service plan",
+        "Performance": "Linux Python 3.12 B1",
+        "Date": "23/06/29"
+    },
+    "parameters": {
+        "subscriptionId": {
+            "value": "78fc6496-b9cb-4918-a231-b199ddf00c4c"
+        },
+        "resourceGroupName": {
+            "value": "TestRG02"
+        },
+        "name": {
+            "value": "onlineSurvey02"
+        },
+        "location": {
+            "value": "South Africa North"
+        },
+        "hostingPlanName": {
+            "value": "ASP-Production"
+        },
+        "serverFarmResourceGroup": {
+            "value": "TestRG02"
+        },
+        "alwaysOn": {
+            "value": false
+        },
+        "ftpsState": {
+            "value": "FtpsOnly"
+        },
+        "sku": {
+            "value": "Basic"
+        },
+        "skuCode": {
+            "value": "B1"
+        },
+        "numberOfWorkers": {
+            "value": "1"
+        },
+        "workerSize": {
+            "value": "0"
+        },
+        "workerSizeId": {
+            "value": "0"
+        },
+        "linuxFxVersion": {
+            "value": "PYTHON|3.12"
+        }
+    }
+}
