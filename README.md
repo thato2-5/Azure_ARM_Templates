@@ -1,10 +1,10 @@
 This repository represents a set of Azure services needed to successfully create a virtual machine.
 Virtual Machine Specs:
-  -> SKU : Free B1
-  -> Disk : Managed 30GB
-  -> Location : South Africa North
-  -> Authentication : Password
-  -> Type : Ubuntu Server
+                    -> SKU : Free B1 \n
+                    -> Disk : Managed 30GB
+                    -> Location : South Africa North
+                    -> Authentication : Password
+                    -> Type : Ubuntu Server
 
 Comments:
 Please update the parameters.json file to include your own runtime values.
