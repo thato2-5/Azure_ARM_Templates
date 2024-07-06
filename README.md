@@ -1,5 +1,6 @@
 This repository represents a set of Azure services needed to successfully create a virtual machine.
 Virtual Machine Specs:
+
                     -> SKU : Free B1 \n
                     -> Disk : Managed 30GB
                     -> Location : South Africa North
