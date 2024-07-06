@@ -8,6 +8,7 @@ Virtual Machine Specs:
                     -> Type : Ubuntu Server
 
 Comments:
-Please update the parameters.json file to include your own runtime values.
-The setup.sh file will customize the OS by installing and configuring python.
-This VM was meant for replacing my App Service Plane (ASP) to serve flask applications.
+
+    Please update the parameters.json file to include your own runtime values.
+    The setup.sh file will customize the OS by installing and configuring python.
+    This VM was meant for replacing my App Service Plane (ASP) to serve flask applications.
