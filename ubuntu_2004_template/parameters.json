@@ -1,0 +1,110 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "southafricanorth"
+        },
+        "networkInterfaceName": {
+            "value": "subscription1vm945"
+        },
+        "networkSecurityGroupName": {
+            "value": "subscription1VM-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "SSH",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "22"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualNetworkName": {
+            "value": "subscription1VM-vnet"
+        },
+        "addressPrefixes": {
+            "value": [
+                "10.0.0.0/16"
+            ]
+        },
+        "subnets": {
+            "value": [
+                {
+                    "name": "default",
+                    "properties": {
+                        "addressPrefix": "10.0.0.0/24"
+                    }
+                }
+            ]
+        },
+        "publicIpAddressName": {
+            "value": "subscription1VM-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Static"
+        },
+        "publicIpAddressSku": {
+            "value": "Standard"
+        },
+        "pipDeleteOption": {
+            "value": "Delete"
+        },
+        "virtualMachineName": {
+            "value": "subscription1VM"
+        },
+        "virtualMachineComputerName": {
+            "value": "subscription1VM"
+        },
+        "virtualMachineRG": {
+            "value": "Subscription1"
+        },
+        "osDiskType": {
+            "value": "Standard_LRS"
+        },
+        "osDiskDeleteOption": {
+            "value": "Delete"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B1ls"
+        },
+        "nicDeleteOption": {
+            "value": "Delete"
+        },
+        "hibernationEnabled": {
+            "value": false
+        },
+        "adminUsername": {
+            "value": "thato"
+        },
+        "enablePeriodicAssessment": {
+            "value": "ImageDefault"
+        },
+        "patchMode": {
+            "value": "AutomaticByPlatform"
+        },
+        "rebootSetting": {
+            "value": "IfRequired"
+        },
+        "securityType": {
+            "value": "TrustedLaunch"
+        },
+        "secureBoot": {
+            "value": true
+        },
+        "vTPM": {
+            "value": true
+        }
+    }
+}
