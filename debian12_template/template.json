@@ -1,0 +1,135 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "domainName": {
+            "type": "string"
+        },
+        "resourceGroupName": {
+            "type": "string"
+        },
+        "location": {
+            "type": "string"
+        },
+        "virtualMachineName": {
+            "type": "string"
+        },
+        "virtualMachineSize": {
+            "type": "string"
+        },
+        "adminUsername": {
+            "type": "string"
+        },
+        "adminPassword": {
+            "type": "secureString"
+        },
+        "storageAccountName": {
+            "type": "string"
+        },
+        "storageAccountType": {
+            "type": "string"
+        },
+        "virtualNetworkName": {
+            "type": "string"
+        },
+        "addressPrefix": {
+            "type": "string"
+        },
+        "subnetName": {
+            "type": "string"
+        },
+        "subnetPrefix": {
+            "type": "string"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "name": "[parameters('virtualMachineName')]",
+            "type": "Microsoft.ClassicCompute/virtualMachines",
+            "location": "southafricanorth",
+            "apiVersion": "2017-04-01",
+            "dependsOn": [
+                "[concat('Microsoft.ClassicCompute/domainNames/', parameters('domainName'))]",
+                "[concat('Microsoft.ClassicNetwork/virtualNetworks/', parameters('virtualNetworkName'))]"
+            ],
+            "properties": {
+                "storageProfile": {
+                    "operatingSystemDisk": {
+                        "caching": "ReadWrite",
+                        "diskName": "[concat(parameters('virtualMachineName'), '1315')]",
+                        "vhdUri": "[concat(concat(reference(resourceId('Subscription1', 'Microsoft.ClassicStorage/storageAccounts', parameters('storageAccountName')), '2015-06-01').endpoints[0], 'vhds/'), parameters('virtualMachineName'), '-os-7788', '.vhd')]",
+                        "sourceImageName": "b1ed55ca40564e13a60fd36a6106398a__OpenLogic-CentOS-6.10-2020042900"
+                    }
+                },
+                "hardwareProfile": {
+                    "platformGuestAgent": "true",
+                    "size": "[parameters('virtualMachineSize')]"
+                },
+                "domainName": {
+                    "id": "[resourceId(parameters('resourceGroupName'), 'Microsoft.ClassicCompute/domainNames', parameters('domainName'))]"
+                },
+                "operatingSystemProfile": {
+                    "computerName": "[parameters('virtualMachineName')]",
+                    "adminUserName": "[parameters('adminUsername')]",
+                    "linuxOperatingSystemProfile": {
+                        "disableSshPasswordAuthentication": "false"
+                    },
+                    "adminPassword": "[parameters('adminPassword')]"
+                },
+                "networkProfile": {
+                    "virtualNetwork": {
+                        "id": "[resourceId(parameters('resourceGroupName'),'Microsoft.ClassicNetwork/virtualNetworks', parameters('virtualNetworkName'))]",
+                        "subnetNames": [
+                            "[parameters('subnetName')]"
+                        ]
+                    },
+                    "inputEndpoints": [
+                        {
+                            "enableDirectServerReturn": "True",
+                            "endpointName": "allowSSHTraffic",
+                            "privatePort": 22,
+                            "publicPort": 22,
+                            "protocol": "tcp"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Microsoft.ClassicCompute/domainNames",
+            "name": "[parameters('domainName')]",
+            "location": "[parameters('location')]",
+            "apiVersion": "2016-11-01",
+            "properties": {}
+        },
+        {
+            "type": "Microsoft.ClassicNetwork/virtualNetworks",
+            "name": "[parameters('virtualNetworkName')]",
+            "location": "[parameters('location')]",
+            "apiVersion": "2016-11-01",
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "[parameters('addressPrefix')]"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "[parameters('subnetName')]",
+                        "addressPrefix": "[parameters('subnetPrefix')]"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "[parameters('storageAccountName')]",
+            "type": "Microsoft.ClassicStorage/storageAccounts",
+            "location": "[parameters('location')]",
+            "apiVersion": "2016-11-01",
+            "properties": {
+                "accountType": "[parameters('storageAccountType')]"
+            }
+        }
+    ]
+}
