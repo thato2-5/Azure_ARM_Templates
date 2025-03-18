@@ -1,0 +1,80 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "southafricanorth"
+        },
+        "networkInterfaceName": {
+            "value": "ubuntuserver2404vm38"
+        },
+        "networkSecurityGroupName": {
+            "value": "ubuntuServer2404VM-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "SSH",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "22"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/f0e6806f-8d56-4448-bc04-388758577bb3/resourceGroups/azureSubscription1/providers/Microsoft.Network/virtualNetworks/online-survey-VM01-vnet"
+        },
+        "publicIpAddressName": {
+            "value": "ubuntuServer2404VM-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Static"
+        },
+        "publicIpAddressSku": {
+            "value": "Standard"
+        },
+        "pipDeleteOption": {
+            "value": "Delete"
+        },
+        "virtualMachineName": {
+            "value": "ubuntuServer2404VM"
+        },
+        "virtualMachineComputerName": {
+            "value": "ubuntuServer2404VM"
+        },
+        "virtualMachineRG": {
+            "value": "azureSubscription1"
+        },
+        "osDiskType": {
+            "value": "Standard_LRS"
+        },
+        "osDiskDeleteOption": {
+            "value": "Delete"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B1ms"
+        },
+        "nicDeleteOption": {
+            "value": "Delete"
+        },
+        "hibernationEnabled": {
+            "value": false
+        },
+        "adminUsername": {
+            "value": "thato"
+        },
+        "enablePeriodicAssessment": {
+            "value": "ImageDefault"
+        }
+    }
+}
