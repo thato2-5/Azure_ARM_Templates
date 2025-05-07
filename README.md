@@ -28,34 +28,34 @@ Azure CLI:
     az deployment group create --resource-group <resource-group-name> --template-file <template-file.json>
 
 #### Screenshots / Video Demo:
-**Screenshot 1:** [First Form]
+**Screenshot 1:** [Create VM Template]
 ![Image](https://github.com/thato2-5/Azure_ARM_Templates/blob/main/createVM_Template.png)
 
-**Screenshot 1:** [First Form]
+**Screenshot 1:** [Generate SSH Keys]
 ![Image](https://github.com/thato2-5/Azure_ARM_Templates/blob/main/generate_ssh_keys.png)
 
-**Screenshot 1:** [First Form]
+**Screenshot 1:** [Parameters]
 ![Image](https://github.com/thato2-5/Azure_ARM_Templates/blob/main/parameters_for_automation.png)
 
-**Screenshot 1:** [First Form]
+**Screenshot 1:** [Template]
 ![Image](https://github.com/thato2-5/Azure_ARM_Templates/blob/main/template_for_automation.png)
 
-**Screenshot 1:** [First Form]
+**Screenshot 1:** [Connection]
 ![Image](https://github.com/thato2-5/Azure_ARM_Templates/blob/main/vm_connection.png)
 
-**Screenshot 1:** [First Form]
+**Screenshot 1:** [Deployment]
 ![Image](https://github.com/thato2-5/Azure_ARM_Templates/blob/main/vm_deployment.png)
 
-**Screenshot 1:** [First Form]
-![Image](https://github.com/thato2-5/Azure_ARM_Templates/blob/main/vm_deployment_succes.png)
+**Screenshot 1:** [Deployment Sucess]
+![Image](https://github.com/thato2-5/Azure_ARM_Templates/blob/main/vm_deployment_success.png)
 
-**Screenshot 1:** [First Form]
+**Screenshot 1:** [VM Overview]
 ![Image](https://github.com/thato2-5/Azure_ARM_Templates/blob/main/vm_overview.png)
 
-**Screenshot 1:** [First Form]
+**Screenshot 1:** [VM Screenfetch]
 ![Image](https://github.com/thato2-5/Azure_ARM_Templates/blob/main/vm_screenfetch.png)
 
-**Screenshot 1:** [First Form]
+**Screenshot 1:** [VM Update]
 ![Image](https://github.com/thato2-5/Azure_ARM_Templates/blob/main/vm_update.png)
 
 
