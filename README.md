@@ -27,10 +27,14 @@ Azure CLI:
 
     az deployment group create --resource-group <resource-group-name> --template-file <template-file.json>
 
+#### Screenshots / Video Demo:
+-**Screenshot 1:** [First Form]
+![Image](https://github.com/thato2-5/Azure_ARM_Templates/blob/main/createVM_Template.png)
+
 Contributing
 
 Contributions are welcome! If you have a template you'd like to share or improvements to existing templates, please feel free to submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
 Contact
 
-For questions or suggestions, please open an issue in the repository or reach out to me directly at [thatomonyamane25@gmail.com].
+For questions or suggestions, please open an issue in the repository or reach out to me directly at [thato@monyatech.org.za] or [support@monyatech.org.za].
